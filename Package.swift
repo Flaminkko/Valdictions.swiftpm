@@ -33,9 +33,15 @@ let package = Package(
             ]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/SvenTiigi/YoutubePlayerKit.git", "1.8.0"..<"2.0.0")
+    ],
     targets: [
         .executableTarget(
             name: "AppModule",
+            dependencies: [
+                .product(name: "YouTubePlayerKit", package: "youtubeplayerkit")
+            ],
             path: "."
         )
     ]
