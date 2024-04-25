@@ -6,6 +6,9 @@ struct ContentView: View {
             NavigationLink(destination: TeamsView()) {
                 Text("Go to TeamsView")
             }
+            NavigationView{
+                NavigationLink("Go to YouTubeKit", destination: YouTubeKit())
         }
+        navigationTitle("Welcome To Validictions")
     }
 }

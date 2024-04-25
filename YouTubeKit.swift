@@ -10,9 +10,7 @@ import SwiftUI
 import YouTubePlayerKit
 
 struct YouTubeKit: View {
-
-    @StateObject
-    var youTubePlayer: YouTubePlayer = "https://www.youtube.com/watch?v=IHf_GgYY2zg"
+@StateObject var youTubePlayer: YouTubePlayer = "https://www.youtube.com/watch?v=QhwACyRTiPI"
 
     var body: some View {
         YouTubePlayerView(self.youTubePlayer) { state in
