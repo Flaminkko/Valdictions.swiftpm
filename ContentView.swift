@@ -8,7 +8,8 @@ struct ContentView: View {
             }
             NavigationView{
                 NavigationLink("Go to YouTubeKit", destination: YouTubeKit())
+            }
+            navigationTitle("Welcome To Validictions")
         }
-        navigationTitle("Welcome To Validictions")
     }
 }

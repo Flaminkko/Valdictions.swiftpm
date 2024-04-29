@@ -19,8 +19,8 @@ struct TeamsView: View {
             }
             .navigationTitle("Teams")
         }
-        .onAppear {
+        .onAppear(perform: {
             viewModel.fetchTeams()
-        }
+        })
     }
 }
