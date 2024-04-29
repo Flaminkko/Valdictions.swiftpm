@@ -1,15 +1,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab = 0
     var body: some View {
-        NavigationView {
-            NavigationLink(destination: TeamsView()) {
-                Text("Go to TeamsView")
+        VStack{
+            TabView(selection: $selectedTab) {
+                NavigationLink(destination: YouTubeKit()) {
+                    Text("Go To Youtubekitview")
+                } .tabItem {
+                    Image(systemName: "1.circle")
+                    Text("First")
+                }
+                NavigationLink(destination: TeamsView()) {
+                    Text("Go to TeamsView")
+                }
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("Second")
+                }
             }
-            NavigationView{
-                NavigationLink("Go to YouTubeKit", destination: YouTubeKit())
-            }
-            navigationTitle("Welcome To Validictions")
         }
+        .navigationTitle("Welcome To Validictions")
     }
 }
