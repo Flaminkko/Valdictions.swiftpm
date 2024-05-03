@@ -19,7 +19,7 @@ let package = Package(
             bundleIdentifier: "org.jhhs.425326.Valdictions",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .box),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.red),
             supportedDeviceFamilies: [
                 .pad,
