@@ -17,6 +17,7 @@ let package = Package(
             name: "Valdictions",
             targets: ["AppModule"],
             bundleIdentifier: "org.jhhs.425326.Valdictions",
+            teamIdentifier: "G8D93PLQUC",
             displayVersion: "1.0",
             bundleVersion: "1",
             appIcon: .placeholder(icon: .box),
@@ -30,6 +31,10 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
+            ],
+            capabilities: [
+                .incomingNetworkConnections(),
+                .outgoingNetworkConnections()
             ]
         )
     ],

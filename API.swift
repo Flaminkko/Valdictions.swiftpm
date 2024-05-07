@@ -53,7 +53,6 @@ class TeamsViewModel: ObservableObject {
                     
                     do {
                         let decodedData = try JSONDecoder().decode([Teams].self, from: data)
-                        // Update the state variable with the fetched posts
                         DispatchQueue.main.async {
                             self.teams = decodedData
                         }
