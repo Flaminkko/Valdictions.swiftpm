@@ -6,6 +6,7 @@ struct ContentView: View {
         VStack{
             NavigationView {
                 NavigationLink("Go to TeamsView", destination: TeamsView())
+                NavigationLink("Go to YoutubeKit", destination: YouTubeKit())
             }
         }
         .navigationTitle("Welcome To Validictions")
