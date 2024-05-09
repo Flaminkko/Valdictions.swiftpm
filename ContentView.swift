@@ -2,28 +2,22 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedTab = 0
-    
     var body: some View {
         VStack{
             TabView(selection: $selectedTab) {
-                        Text("Go To YoutubeKit")
-                            .tabItem {
-                                Image(systemName: "1.circle")
-                                Text("First")
-                            }
-                            .onTapGesture{
-                                YouTubeKit()
-                            }
-                    
-                        Text("Go To Teams View")
-                            .tabItem {
-                                Image(systemName: "2.circle")
-                                Text("Second")
-                                
-                            }
-                            .onTapGesture{
-                                TeamsView()
-                            }
+                YouTubeKit()
+                    .tabItem {
+                        Image(systemName: "tv.fill")
+                        Text("Watch/Predict")
+                    }
+                    .tag(0)
+                
+                TeamsView()
+                    .tabItem {
+                        Image(systemName: "person.fill")
+                        Text("Teams")
+                    }
+                    .tag(1)
             }
         }
     }
