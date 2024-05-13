@@ -20,7 +20,7 @@ struct TeamsView: View {
             .navigationTitle("Teams")
         }
         .onAppear(perform: {
-            viewModel.fetchTeams()
+            viewModel.loadData()
         })
     }
 }
