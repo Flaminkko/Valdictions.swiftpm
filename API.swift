@@ -9,11 +9,15 @@ import Foundation
 import SwiftUI
 
 struct Teams: Identifiable, Codable {
-    let id: Int
-    let url: URL
+    let id: String
+    let url: String
     let name: String
     let img: String
     let country: String
+}
+
+struct Response: Decodable {
+    let data: [Teams]
 }
 
 class TeamsViewModel: ObservableObject {
