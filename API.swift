@@ -16,14 +16,14 @@ struct Team: Identifiable, Codable {
     let country: String
 }
 
-struct TeamData: Decodable {
+struct TeamsData: Decodable {
     let data: [Team]
 }
 
 class TeamsViewModel: ObservableObject {
     @Published var teams: [Team] = []
     
-    func loadData() {
+    func loadTeamData() {
         guard let url = URL(string: "https://vlr.orlandomm.net/api/v1/teams?limit=all") else {
             print("Invalid URL")
             return
@@ -35,7 +35,7 @@ class TeamsViewModel: ObservableObject {
                 return
             }
             
-            if let decodedData = try? JSONDecoder().decode(TeamData.self, from: data) {
+            if let decodedData = try? JSONDecoder().decode(TeamsData.self, from: data) {
                 DispatchQueue.main.async {
                     self.teams = decodedData.data
                 }
@@ -45,3 +45,4 @@ class TeamsViewModel: ObservableObject {
         }.resume()
     }
 }
+
