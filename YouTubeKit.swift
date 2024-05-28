@@ -48,7 +48,7 @@ struct YouTubeKit: View {
             .pickerStyle(.segmented)
             .padding()
             Button("Predict") {
-                if let predict = Int(predictAmount), predict <= userPoints, predict > 0 {
+                if let predict = Int(predictAmount) {
                     let selectedTeam = teams[selectedTeamIndex]
                     let winningTeam = "Sentinels"
                     if selectedTeam == winningTeam {
